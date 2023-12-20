@@ -8,10 +8,11 @@ import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class LearnWindow {
-
-	public static void main(String[] args) {
+@Test
+	public void runwindow() {
 		   // Initialize ChromeDriver
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -47,6 +48,8 @@ Set<String> WindowHandles1=	driver.getWindowHandles();
 List<String>  lstwindow1 = new ArrayList<String>(WindowHandles1);
 driver.switchTo().window(lstwindow1.get(1));
 System.out.println(lstwindow1.size());
+driver.switchTo().window(lstwindow.get(0));
+System.out.println(driver.getTitle());
 	
 	//Close all windows
 driver.findElement(By.xpath("//span[text()='Close Windows']")).click();
