@@ -57,7 +57,7 @@ public class WindowHandles {
         List<String>  lstwindow2 = new ArrayList<String>(WindowHandles2);
         driver.switchTo().window(lstwindow2.get(1));
         System.out.println(driver.getTitle());
-		driver.findElement(By.xpath("(//div[@class='x-grid3-cell-inner x-grid3-col-lastName']//a)[2]")).click();
+		driver.findElement(By.xpath("(//div[@class='x-grid3-cell-inner x-grid3-col-lastName']//a)[1]")).click();
 		
 		driver.switchTo().window(lstwindow1.get(0));
 		System.out.println(driver.getTitle());
